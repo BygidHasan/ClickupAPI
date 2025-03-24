@@ -6,7 +6,7 @@ const headers = {
   'Content-Type': 'application/json'
 };
 
-exports.makeApiCall = async (url, method='get', data=null) => {
+exports.makeApiCall = async (url, method = 'get', data = null) => {
   try {
     const response = await axios({ method, url, data, headers });
     return response.data;
@@ -14,4 +14,4 @@ exports.makeApiCall = async (url, method='get', data=null) => {
     console.log('API error:', error.response?.data || error.message);
   }
   return null;
-}
+};

@@ -1,5 +1,5 @@
 const codeforcesUrl = 'https://codeforces.com/api/contest.list';
 
-export default {
+module.exports = {
   codeforcesUrl
 };

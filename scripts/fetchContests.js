@@ -1,7 +1,7 @@
 const { makeApiCall } = require('../utils/apiHelper');
-const { codeforcesUrl } = require('../utils/urls');
+const { codeforcesUrl } = require('../utils/urls.js');
 
-async function fetchCodeforcesContests() {
+exports.fetchCodeforcesContests = async () => {
   try {
     const response = await makeApiCall(codeforcesUrl);
     const filteredContests = response?.result.filter(contest => {
@@ -19,7 +19,3 @@ async function fetchCodeforcesContests() {
     return [];
   }
 }
-
-module.exports = {
-  fetchCodeforcesContests,
-};
